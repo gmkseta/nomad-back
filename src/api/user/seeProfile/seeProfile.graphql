@@ -1,0 +1,4 @@
+type Query {
+  seeProfile(id: String!): User!
+  # 나중에 user, books, 등으로 확장해서 변경하기
+}

@@ -1,0 +1,3 @@
+type Mutation {
+  editBook(id: ID!, title: String, price: String, author: String, barcode: String): Book!
+}

@@ -1,0 +1,3 @@
+type Query {
+  recentBooks(limitNumber:Int!):[Book!]!
+}

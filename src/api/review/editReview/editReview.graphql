@@ -1,0 +1,13 @@
+enum ACTIONS {
+  EDIT
+  DELETE
+}
+
+type Mutation {
+  editReview(
+    id: String!
+    content: String!
+    rate: Float!
+    action: ACTIONS!
+  ): Review!
+}

@@ -1,0 +1,9 @@
+type Mutation {
+  newBook(
+    title: String!
+    author: String!
+    barcode: String
+    price: Int
+    review_average: Int
+  ): Book!
+}

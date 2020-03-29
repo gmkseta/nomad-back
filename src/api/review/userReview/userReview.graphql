@@ -1,0 +1,4 @@
+
+type Query {
+  userReview(id: String!): [Review!]
+}

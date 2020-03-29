@@ -1,0 +1,7 @@
+type ReviewAndCount {
+  review: Review!
+  reviewCount: Int
+}
+type Mutation {
+  addReview(bookId: String!, content: String, rate: Int!): ReviewAndCount!
+}

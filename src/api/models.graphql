@@ -1,0 +1,69 @@
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  password: String
+  googleId: String
+  reviews: [Review!]
+  created_at: String
+  updated_at: String
+  reviewsCount: Int
+  isSelf: Boolean!
+  rank: Int!
+}
+
+type Category {
+  id: ID!
+  name: String!
+  books: [Book!]
+}
+
+type Book {
+  id: ID!
+  category: Category
+  image: String
+  title: String!
+  author: String
+  barcode: String
+  price: Int
+  pub_date: String
+
+  review_average: Float
+  color: String
+
+  company: String
+  reviews: [Review!]
+  reviewsCount: Int
+  
+  keywords: [Keyword!]
+  created_at: String
+  updated_at: String
+}
+
+
+type Keyword {
+  id: ID!
+  name: String!
+  books: [Book!]
+  created_at: String
+  updated_at: String
+}
+
+type Review {
+  id: ID!
+  rate: Int
+  book: Book!
+  user: User
+  guest: String
+  content: String
+  created_at: String
+  updated_at: String
+
+}
+
+
+type Like {
+  id: ID!
+  user: User!
+  book: Book!
+}
